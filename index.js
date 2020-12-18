@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = () => {
+const init = () => {
     return inquirer.prompt ([
         {
             type: 'input',
@@ -100,17 +100,52 @@ const questions = () => {
             type: 'list',
             name: 'license',
             message: "Which license would you like for your project?",
-            choices: ['Mozilla Public License 2.0', 'MIT License', 'GNU General Public License v3.0' ]
+            choices: ['Apache', 'MIT', 'GNU', 'None' ]
         }
         
-    ]);
+    ])
+    .then(userInput => {
+        return userInput;
+    })
 };
 
+
+const generateReadMe = userInput => {
+    const{ name, github, email, title, description, installation, usage, contributions, test, license } = userInput;
+    return `
+    ${name},
+    ${github},
+    ${email},
+    ${title},
+    ${description},
+    ${installation},
+    ${usage},
+    ${contributions},
+    ${test},
+    ${license}
+    `
+}
+
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+    fs.writeFile('./dist/readme.md', data, err => {
+        if (err) throw err;
+        console.log(data);
+        console.log('Readme complete');
+    })
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 // Function call to initialize app
-init();
+init()
+    .then(data => {
+        return generateReadMe(data);
+    })
+    .then(userData => {
+        return writeToFile(userData);
+    });
+
+
