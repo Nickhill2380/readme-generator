@@ -113,16 +113,36 @@ const init = () => {
 const generateReadMe = userInput => {
     const{ name, github, email, title, description, installation, usage, contributions, test, license } = userInput;
     return `
-    ${name},
-    ${github},
-    ${email},
-    ${title},
-    ${description},
-    ${installation},
-    ${usage},
-    ${contributions},
-    ${test},
+    # ${title}
+
+    ## Description
+    ${description}
+    
+    ## Table of Contents
+    *[Installation](#installation)
+    *[Usage](#usage)
+    *[Credits](#credits)
+    *[Liscense](#liscense)
+
+    ## Installation
+    ${installation}
+
+    ## Usage
+    ${usage}
+
+    ## Credits
+    ${name}  [https://github.com/${github}
+    ${email}
+
+    ##License
     ${license}
+    
+    ##Contributing
+    ${contributions}
+    
+    ## Tests
+    ${test}
+
     `
 }
 
