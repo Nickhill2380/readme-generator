@@ -1,9 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const init = () => {
+const questions = () => {
     return inquirer.prompt ([
         {
             type: 'input',
@@ -100,7 +101,7 @@ const init = () => {
             type: 'list',
             name: 'license',
             message: "Which license would you like for your project?",
-            choices: ['Apache', 'MIT', 'GNU', 'None' ]
+            choices: ['Apache', 'MIT', 'GPL', 'None' ]
         }
         
     ])
@@ -109,63 +110,27 @@ const init = () => {
     })
 };
 
-
-const generateReadMe = userInput => {
-    const{ name, github, email, title, description, installation, usage, contributions, test, license } = userInput;
-    return `
-    # ${title}
-
-    ## Description
-    ${description}
-    
-    ## Table of Contents
-    *[Installation](#installation)
-    *[Usage](#usage)
-    *[Credits](#credits)
-    *[Liscense](#liscense)
-
-    ## Installation
-    ${installation}
-
-    ## Usage
-    ${usage}
-
-    ## Credits
-    ${name}  [https://github.com/${github}
-    ${email}
-
-    ##License
-    ${license}
-    
-    ##Contributing
-    ${contributions}
-    
-    ## Tests
-    ${test}
-
-    `
-}
-
-
 // TODO: Create a function to write README file
-function writeToFile(data) {
-    fs.writeFile('./dist/readme.md', data, err => {
+function writeToFile(fileName, readMeData) {
+    fs.writeFile(fileName, readMeData, err => {
         if (err) throw err;
-        console.log(data);
+        console.log(readMeData);
         console.log('Readme complete');
     })
 }
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {
+    questions()
+    .then(data => {
+        return generateMarkdown(data);
+    })
+    .then(readMeData => {
+        return writeToFile('README.md', readMeData);
+    });
+}
 
 // Function call to initialize app
 init()
-    .then(data => {
-        return generateReadMe(data);
-    })
-    .then(userData => {
-        return writeToFile(userData);
-    });
-
+    
 
