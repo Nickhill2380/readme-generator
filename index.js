@@ -59,28 +59,14 @@ const questions = () => {
             }   
         },
         {
-            type: 'confirm',
-            name: 'confirmDescription',
-            message: 'Would you like to provide a description for your project?',
-            default: true
-        },
-        {
             type: 'input',
             name: 'description',
             message: 'Please provide a brief description of your project.',
-            when: ({confirmDescription}) => confirmDescription
-        },
-        {
-            type: 'confirm',
-            name: 'confirmInstallation',
-            message: 'Do you need to provide any information in regards to installation of the project?',
-            default: true
         },
         {
             type: 'input',
             name: 'installation',
-            message: 'Please provide information regarding installation of the project.',
-            when:({confirmInstallation}) => confirmInstallation
+            message: 'Please provide information regarding installation of the project.',        
         },
         {
             type: 'input',

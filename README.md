@@ -1,14 +1,14 @@
 
   
-# fasd  
+# readme-generator  
 
-![Apache](https://img.shields.io/aur/license/android-studio.png)
+![MIT](https://img.shields.io/npm/l/express.png)
       
                 
                 
 ## Description
 
-fasdf
+Prompts user to answer questions and then generates a readme.md for them.
     
 ## Table of Contents
 
@@ -19,34 +19,34 @@ fasdf
 
 ## Installation
 
-undefined
+You need to have inquirer installed to run the program.
 
 ## Usage
 
-adfasd
+Please see images and video.
 
 ## Questions
 
-nickhfi  
-GitHub: 43t [https://github.com/43t]
+Nick Hill  
+GitHub: nickhill2380 [https://github.com/nickhill2380]
 Please feel free to email me if you have additional questions about this project.
-Email: <fads>
+Email: <nickhill2380@gmail.com>
 
 
 ## License
 
-This project is covered by the Apache license.Found at the link below:
+This project is covered by the MIT license.Found at the link below:
       
 
-[Apache](https://www.apache.org/licenses/LICENSE-2.0)
+[MIT](https://www.opensource.org/licenses/mit-license.php)
       
 
 
 ## Contributing
 
-dfasd
+Please be kind.
 
 ## Tests
-fasdfa
+Run tests in ordinance with your best judgement.
 
 
