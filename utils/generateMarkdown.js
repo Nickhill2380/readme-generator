@@ -47,7 +47,7 @@ const renderLicenseSection = license =>{
       return `
 ## License
 
-This project is covered by the ${license} license.Found at the link below:
+This project is covered by the ${license} license. Found at the link below:
       `
   }
 }
@@ -69,7 +69,7 @@ ${description}
 
 [Installation](#installation)
 [Usage](#usage)
-[Credits](#credits)
+[Questions](#questions)
 [License](#license)
 
 ## Installation

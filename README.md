@@ -2,28 +2,32 @@
   
 # readme-generator  
 
-![MIT](https://img.shields.io/npm/l/express.png)
-      
-                
+ ![MIT](/utils/images/mit-license.png)
+
+           
                 
 ## Description
 
-Prompts user to answer questions and then generates a readme.md for them.
+This application allows the user to answer some prompts and then have a readme.md file generated for them. 
+
+    In the future I would like to add a feature for adding screenshots in the prompts and allow having the file save into the user's project folder.
     
 ## Table of Contents
 
 [Installation](#installation)
 [Usage](#usage)
-[Credits](#credits)
+[Questions](#questions)
 [License](#license)
 
 ## Installation
 
-You need to have inquirer installed to run the program.
+This application requires inquirer to function. 
 
 ## Usage
 
-Please see images and video.
+Please see attached video for a demo on how to utilize this application.
+
+[Demo]<iframe src="https://drive.google.com/file/d/1OO8pRYYS8TLyTzDdr54EcL2Twd6jQN8f/preview" width="640" height="480"></iframe>
 
 ## Questions
 
@@ -35,18 +39,7 @@ Email: <nickhill2380@gmail.com>
 
 ## License
 
-This project is covered by the MIT license.Found at the link below:
+This project is covered by the MIT license. Found at the link below:
       
 
 [MIT](https://www.opensource.org/licenses/mit-license.php)
-      
-
-
-## Contributing
-
-Please be kind.
-
-## Tests
-Run tests in ordinance with your best judgement.
-
-
