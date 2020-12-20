@@ -10,7 +10,7 @@
 
 This application allows the user to answer some prompts and then have a readme.md file generated for them. 
 
-    In the future I would like to add a feature for adding screenshots in the prompts and allow having the file save into the user's project folder.
+In the future I would like to add a feature for adding screenshots in the prompts and allow having the file save into the user's project folder.
     
 ## Table of Contents
 
@@ -27,7 +27,7 @@ This application requires inquirer to function.
 
 Please see attached video for a demo on how to utilize this application.
 
-[Demo]<iframe src="https://drive.google.com/file/d/1OO8pRYYS8TLyTzDdr54EcL2Twd6jQN8f/preview" width="640" height="480"></iframe>
+[Demo](https://drive.google.com/file/d/1OO8pRYYS8TLyTzDdr54EcL2Twd6jQN8f/preview)
 
 ## Questions
 
